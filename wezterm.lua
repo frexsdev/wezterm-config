@@ -1,15 +1,18 @@
 local wezterm = require("wezterm")
+local dracula = require("dracula")
 
 return {
-	color_scheme = "nord",
+	colors = dracula,
 	initial_rows = 1000,
 	initial_cols = 1000,
+	default_prog = { "/home/hugo/junest/bin/junest" },
 	font = wezterm.font("JetBrains Mono"),
 	font_size = 11,
 	disable_default_key_bindings = true,
-	default_prog = { "/home/hugo/miniconda3/bin/fish", "-l" },
 	window_background_opacity = 0.7,
-	enable_tab_bar = false,
+	-- enable_tab_bar = false,
+	tab_bar_at_bottom = true,
+	use_fancy_tab_bar = false,
 	window_padding = {
 		left = 2,
 		right = 2,
